@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ftessi <ftessi@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/07 17:33:14 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/11 18:21:49 by ftessi           ###   ########.fr       */
+/*   Created: 2026/05/11 13:37:40 by ftessi            #+#    #+#             */
+/*   Updated: 2026/05/11 13:57:49 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isprint(int c)
 {
-	if (c >= 'a' && c<= 'z' || c >= 'A' && c <= 'Z')
+	if (c > 31 && c < 127)
+	{
 		return (1);
+	}
 	else
+	{
 		return (0);
+	}
 }
-
+/*
 #include <stdio.h>
-#include <ctype.h>
-int main(void)
+int	main(void)
 {
-	char	c;
-	
-	c = '4';
-	printf("Result for %c: %d", c, ft_isalpha(c));
-	printf("Result for %c: %d", c, isalpha(c));
+	unsigned char	c1, c2;
+
+	c1 = 31;
+	c2 = 32;
+	printf("\nResult for %d: %d", c1, ft_isprint(c1));
+	printf("\nResult for %d: %d", c2, ft_isprint(c2));
 	return (0);
 }
+*/

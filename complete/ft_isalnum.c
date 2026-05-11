@@ -1,31 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/07 17:33:14 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/11 18:21:49 by ftessi           ###   ########.fr       */
+/*   Created: 2026/05/11 13:24:03 by ftessi            #+#    #+#             */
+/*   Updated: 2026/05/11 18:20:57 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isalnum(int c)
 {
-	if (c >= 'a' && c<= 'z' || c >= 'A' && c <= 'Z')
+	if ((c >= '0' && c <= '9') ||
+	 (c >= 'A' && c <= 'Z') ||
+	 (c >= 'a' && c <= 'z'))
+	{
 		return (1);
+	}
 	else
+	{
 		return (0);
+	}
 }
-
+/*
 #include <stdio.h>
 #include <ctype.h>
-int main(void)
+int	main(void)
 {
 	char	c;
-	
-	c = '4';
-	printf("Result for %c: %d", c, ft_isalpha(c));
-	printf("Result for %c: %d", c, isalpha(c));
+	int	i;
+	char	sp;
+
+	c = 'A';
+	i = 6;
+	sp = ' ';
+
+	printf("\nResult for %c: %d", c, ft_isalnum(c));
+	printf("\nResult for %d: %d", i, ft_isalnum(i));
+	printf("\nResult for %c: %d", sp, ft_isalnum(sp));
+	printf("\nResult for %c: %d", c, isalnum(c));
+	printf("\nResult for %d: %d", i, isalnum(i));
+	printf("\nResult for %c: %d", sp, isalnum(sp));
 	return (0);
 }
+*/

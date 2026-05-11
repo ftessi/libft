@@ -1,35 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ftessi <ftessi@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/11 13:24:36 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/11 13:24:44 by ftessi           ###   ########.fr       */
+/*   Created: 2026/05/11 16:00:17 by ftessi            #+#    #+#             */
+/*   Updated: 2026/05/11 16:38:09 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <string.h>
 
-int	ft_isdigit(int c)
+size_t	ft_strlen(const char *s)
 {
-	if ( c >= 0 && c <= 9)
+	size_t	size;
+
+	size = 0;
+	while (*s)
 	{
-		return (1);
+		s++;
+		size++;
 	}
-	else
-	{
-		return (0);
-	}
+	return (size);
 }
 /*
+size_t ft_strlen2(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0' )
+	{
+		i++;
+	}
+	return (i);
+}
+
 #include <stdio.h>
 int	main(void)
 {
-	int	i;
-
-	i = 3;
-	printf("Result for %d: %d", i, ft_isdigit(i));
-	i = 32;
-	printf("\nResult for %d: %d", i, ft_isdigit(i));
+	char	*s = "Helloo";
+	printf("\nSize: %lu", ft_strlen(s));
+	printf("\nSize: %lu", ft_strlen2(s));
 	return (0);
-}*/
+}
+*/
