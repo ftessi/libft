@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ftessi <ftessi@student.42berlin.de>        +#+  +:+       +#+        */
+/*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 13:37:40 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/11 13:57:49 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/12 10:49:41 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	ft_isprint(int c)
 		return (0);
 	}
 }
-/*
+
+#include <ctype.h>
 #include <stdio.h>
 int	main(void)
 {
@@ -31,6 +32,8 @@ int	main(void)
 	c2 = 32;
 	printf("\nResult for %d: %d", c1, ft_isprint(c1));
 	printf("\nResult for %d: %d", c2, ft_isprint(c2));
+	printf("\nResult for %d: %d", c1, isprint(c1));
+	printf("\nResult for %d: %d", c2, isprint(c2));
 	return (0);
 }
-*/
+

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ftessi <ftessi@student.42berlin.de>        +#+  +:+       +#+        */
+/*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 13:24:36 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/11 13:24:44 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/12 10:45:25 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if ( c >= 0 && c <= 9)
+	if ( c >= '0' && c <= '9')
 	{
 		return (1);
 	}
@@ -23,13 +23,18 @@ int	ft_isdigit(int c)
 }
 /*
 #include <stdio.h>
+#include <ctype.h>
 int	main(void)
 {
-	int	i;
+	unsigned char	i;
 
-	i = 3;
+	i = '3';
 	printf("Result for %d: %d", i, ft_isdigit(i));
-	i = 32;
+	i = 52;
 	printf("\nResult for %d: %d", i, ft_isdigit(i));
+	i = '3';
+	printf("\nResult for %d: %d", i, isdigit(i));
+	i = 52;
+	printf("\nResult for %d: %d", i, isdigit(i));
 	return (0);
 }*/
