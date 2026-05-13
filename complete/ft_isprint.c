@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 13:37:40 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/12 10:49:41 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/13 17:03:05 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_isprint(int c)
 		return (0);
 	}
 }
-
+/*
 #include <ctype.h>
 #include <stdio.h>
 int	main(void)
@@ -35,5 +35,4 @@ int	main(void)
 	printf("\nResult for %d: %d", c1, isprint(c1));
 	printf("\nResult for %d: %d", c2, isprint(c2));
 	return (0);
-}
-
+}*/

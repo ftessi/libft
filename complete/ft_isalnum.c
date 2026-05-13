@@ -6,15 +6,14 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 13:24:03 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/11 18:20:57 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/13 17:05:04 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') ||
-	 (c >= 'A' && c <= 'Z') ||
-	 (c >= 'a' && c <= 'z'))
+	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a'
+			&& c <= 'z'))
 	{
 		return (1);
 	}
@@ -24,18 +23,18 @@ int	ft_isalnum(int c)
 	}
 }
 /*
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
+
 int	main(void)
 {
 	char	c;
-	int	i;
+	int		i;
 	char	sp;
 
 	c = 'A';
 	i = 6;
 	sp = ' ';
-
 	printf("\nResult for %c: %d", c, ft_isalnum(c));
 	printf("\nResult for %d: %d", i, ft_isalnum(i));
 	printf("\nResult for %c: %d", sp, ft_isalnum(sp));

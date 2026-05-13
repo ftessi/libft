@@ -6,13 +6,13 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 13:24:36 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/12 10:45:25 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/13 17:05:22 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if ( c >= '0' && c <= '9')
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
@@ -22,8 +22,9 @@ int	ft_isdigit(int c)
 	}
 }
 /*
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
+
 int	main(void)
 {
 	unsigned char	i;
