@@ -1,62 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memset.test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 17:13:11 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/13 16:37:52 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/15 17:18:05 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <aio.h>
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-// void    *ft_memset(void *s, int c, size_t n)
-// {
-//     unsigned int    i;
-//     unsigned char   *p;
-
-//     p = s;
-//     i = 0;
-//     while (i < n)
-//     {
-//         p[i] = c;
-//         i++;
-//     }
-//     return (p);
-// }
-
-void    *ft_memset(void *s, int c, size_t n)
+int	main(void)
 {
-    unsigned char   *p;
-    unsigned char   *start;
+	char	str[] = "Hello how are you? I'm memset";
+	char	str2[] = "Hello how are you? I'm memset";
 
-    p = s;
-    start = p;
-    while (n > 0)
-    {
-        *p = c;
-        p++;
-        n--;
-    }
-    printf("\nReturn: add %p | val %c", start, *start);
-    printf("\nReturn: add %p | val %c", p, *p);
-    return (start);
-}
-
-int     main(void)
-{
-    char    str[] = "Hello how are you? I'm memset";
-    char    str2[] = "Hello how are you? I'm memset";
-
-    printf("\nString: %s", str);
-    ft_memset(&str[25], '.', 4);
-    printf("\nString: %s", str);
-    printf("\nString: %s", str2);
-    memset(&str2[25], '.', 4);
-    printf("\nString: %s", str2);
-    return (0);
+	printf("\nString: %s", str);
+	ft_memset(&str[25], '.', 4);
+	printf("\nString: %s", str);
+	printf("\nString: %s", str2);
+	memset(&str2[25], '.', 4);
+	printf("\nString: %s", str2);
+	return (0);
 }
