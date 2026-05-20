@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 13:37:40 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/13 17:03:05 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/20 13:19:21 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	ft_isprint(int c)
 /*
 #include <ctype.h>
 #include <stdio.h>
+
 int	main(void)
 {
 	unsigned char	c1, c2;

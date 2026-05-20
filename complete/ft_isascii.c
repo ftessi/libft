@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 13:21:47 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/13 17:03:03 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/20 13:19:27 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ int	ft_isascii(int c)
 /*
 #include <ctype.h>
 #include <stdio.h>
+
 int	main(void)
 {
-	unsigned char	u1, u2, u3;
 	unsigned char	i;
 
+	unsigned char	u1, u2, u3;
 	u1 = ' ';
 	u2 = 'a';
 	u3 = '1';

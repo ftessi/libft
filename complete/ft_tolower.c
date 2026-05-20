@@ -6,19 +6,19 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:37:42 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/18 16:40:13 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/20 13:21:19 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-    {
-        c += 32;
-        return (c);
-    }
-    else
-    {
-        return (c);
-    }
+	if (c >= 'A' && c <= 'Z')
+	{
+		c += 32;
+		return (c);
+	}
+	else
+	{
+		return (c);
+	}
 }
