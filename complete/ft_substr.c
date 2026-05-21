@@ -6,40 +6,42 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 11:48:54 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/21 14:24:55 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/21 14:36:56 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char			*substr;
+	char			*substr;
 	unsigned int	i;
-    
+
 	i = 0;
 	while (s && i < start)
 	{
-        s++;
+		s++;
 		i++;
 	}
 	substr = malloc(len);
-	printf("\n 1 substr: %p | %s", substr, substr);
-	printf("\n 2 pos: %d | %s | %d", i, s, start);
 	ft_memcpy(substr, s, len);
-	printf("\n 3 substr: %p | %s", substr, substr);
-	return (substr);
+	if (*substr != *s)
+		return (NULL);
+	else
+		return (substr);
 }
+/*
+#include <stdio.h>
 
 int	main(void)
 {
-	unsigned int i;
-	char *str = "Hello World!";
-	char *sub;
+	unsigned int	i;
+	char			*str;
+	char			*sub;
 
+	str = "Hello World!";
 	i = 6;
 	printf("\n Tests: \n");
 	printf("\n Copy substring: %s", str);
@@ -63,3 +65,4 @@ int	main(void)
 	free(sub);
 	return (0);
 }
+*/
