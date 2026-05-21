@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 13:27:39 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/21 14:54:54 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/21 20:12:43 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 size_t	ft_strlen(const char *s);
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 #endif
