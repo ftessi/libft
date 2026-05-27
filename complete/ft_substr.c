@@ -6,7 +6,11 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 11:48:54 by ftessi            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2026/05/22 18:55:31 by ftessi           ###   ########.fr       */
+=======
+/*   Updated: 2026/05/26 20:06:20 by ftessi           ###   ########.fr       */
+>>>>>>> c103377ad0bcd1768769f9e4ce5d65496cbe0c42
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +37,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else
 		return (substr);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -41,7 +45,7 @@ int	main(void)
 	unsigned int	i;
 	char			*str;
 	char			*sub;
-
+	
 	str = "Hello World!";
 	i = 6;
 	printf("\n Tests: \n");
@@ -66,3 +70,5 @@ int	main(void)
 	free(sub);
 	return (0);
 }
+
+*/
