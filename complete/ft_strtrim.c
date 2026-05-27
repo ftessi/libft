@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:39:51 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/21 20:40:27 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/22 18:19:10 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ int main(void)
     printf("\n String: %s", str);
     trmd = ft_strtrim(str, "as");
     printf("\n String: %s", trmd);
+    free(trmd);
 
     printf("\n Test: \n");
     printf("\n String: %s", str1);

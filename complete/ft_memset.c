@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 17:13:11 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/21 00:19:57 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/22 18:19:20 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*p;
-	unsigned char	value;
+	unsigned char	bset;
 
 	p = s;
-	value = (unsigned char)c;
+	bset = (unsigned char)c;
 	while (n > 0)
 	{
 		*p = c;
@@ -28,9 +28,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 /*
-HERE I HAVE TO STORE THE INT I'M PASSING AS AN 
-UNSIGNED CHAR BECAUSE I WANT TO MOVE BYTE
-BY BYTE, AND NOW I'M JUST TAKING THE n AS IS,
+HERE I HAVE TO STORE THE INT I'M PASSING AS AN UNSIGNED CHAR BECAUSE I WANT TO MOVE BYTE
+BY BYTE, AND NOW I'M JUST TAKING THE n AS IS, 
 
 #include <stdio.h>
 #include <string.h>
