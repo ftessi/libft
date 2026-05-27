@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 13:27:39 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/26 23:46:38 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/27 12:15:17 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,10 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
-#endif
+typedef struct  s_list
+{
+    void            *content;
+    struct s_list   *next;
+}                   t_list;
+
+#endif  
