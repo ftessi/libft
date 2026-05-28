@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 13:27:39 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/28 15:45:23 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/29 00:23:12 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 typedef struct s_list
 {
-    void			*content;
-    struct s_list	*next;
+	void			*content;
+	struct s_list	*next;
 }					t_list;
 
 int					ft_atoi(const char *nptr);
@@ -110,6 +110,5 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);
 
 int					ft_toupper(int c);
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 01:06:19 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/28 11:33:13 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/29 00:22:42 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !f || !del)
 		return (NULL);
-
 	new_list = NULL;
-
 	while (lst)
 	{
 		new_content = f(lst->content);
@@ -44,14 +42,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 void	*to_upper_copy(void *content)
 {
-	char	*str = (char *)content;
+	char	*str;
 	char	*copy;
 	int		i;
 
+	str = (char *)content;
 	copy = ft_strdup(str);
 	if (!copy)
 		return (NULL);
-
 	i = 0;
 	while (copy[i])
 	{
@@ -76,23 +74,17 @@ int	main(void)
 
 	n1 = ft_lstnew(ft_strdup("hello"));
 	n2 = ft_lstnew(ft_strdup("world"));
-
 	n1->next = n2;
 	lst = n1;
-
 	new_lst = ft_lstmap(lst, to_upper_copy, del);
-
 	printf("Original:\n");
 	printf("%s\n", (char *)lst->content);
 	printf("%s\n", (char *)lst->next->content);
-
 	printf("\nMapped:\n");
 	printf("%s\n", (char *)new_lst->content);
 	printf("%s\n", (char *)new_lst->next->content);
-
 	ft_lstclear(&lst, del);
 	ft_lstclear(&new_lst, del);
-
 	return (0);
 }
 */

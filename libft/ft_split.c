@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 16:47:28 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/28 11:35:07 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/29 00:21:36 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char c)
 	printf("\n el numero i: %d | La string: %s", i, s);
 	start = 0;
 	subi = 0;
-	while (s[i]) 
+	while (s[i])
 	{
 		while (s[i] == c)
 		{
@@ -113,9 +113,10 @@ char	**ft_split(char const *s, char c)
 /*
 int	main(void)
 {
-	char *str = "Hello world how are you";
-	char **arr;
+	char	*str;
+	char	**arr;
 
+	str = "Hello world how are you";
 	printf("\n Tests: ");
 	printf("\n String: %s", str);
 	arr = ft_split(str, ' ');

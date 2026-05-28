@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 16:04:17 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/28 11:38:18 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/05/29 00:23:42 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 Checks the needle in the haystack. It will search for
 the smaller string in the bigger one, and will return
 a pointer to the location of the little string inside the big one.
-*/
+
 #include <stdio.h>
 #include <string.h>
 
-/*
+
 
 int	main(void)
 {
