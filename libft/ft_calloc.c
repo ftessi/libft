@@ -6,20 +6,19 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 18:21:42 by ftessi            #+#    #+#             */
-/*   Updated: 2026/06/01 16:00:25 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/06/01 16:45:01 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
+#include "libft.h"
 #include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*ptr;
-	unsigned char	*start;
-	size_t			total;
+	void		*ptr;
+	size_t		total;
 
-	if (size != 0 && nmemb > SIZE_MAX / size)
+	if (size != 0 && nmemb > (size_t)-1/ size)
 	{
 		return (NULL);
 	}
@@ -33,14 +32,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	{
 		return (NULL);
 	}
-	start = ptr;
-	while (total)
-	{
-		*ptr = 0;
-		ptr++;
-		total--;
-	}
-	return (start);
+	ft_bzero(ptr, total);
+	return (ptr);
 }
 /*
 #include <stdio.h>

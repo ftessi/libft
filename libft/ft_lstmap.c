@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 01:06:19 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/29 00:22:42 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/06/01 16:05:18 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+
