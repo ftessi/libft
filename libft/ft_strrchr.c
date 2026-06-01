@@ -15,23 +15,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*ptr;
+	char	*last;
 
-	ptr = (char *)s;
-	ptr += (ft_strlen(s) - 1);
-	while (*ptr != '\0')
+	last = NULL;
+	while (*s)
 	{
-		if (*ptr == c)
-		{
-			return (ptr);
-		}
-		ptr--;
+		if (*s == (unsigned char)c)
+			last = (char *)s;
+		s++;
 	}
-	if (c == '\0')
-	{
-		return (ptr + ft_strlen(s) + 1);
-	}
-	return (NULL);
+	if ((unsigned char)c == '\0')
+		return ((char *)s);
+	return (last);
 }
 
 /*

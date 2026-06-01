@@ -6,7 +6,7 @@
 /*   By: ftessi <ftessi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 18:21:42 by ftessi            #+#    #+#             */
-/*   Updated: 2026/05/28 15:36:54 by ftessi           ###   ########.fr       */
+/*   Updated: 2026/06/01 16:00:25 by ftessi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (size != 0 && nmemb > SIZE_MAX / size)
 	{
 		return (NULL);
+	}
+	if (size == 0 || nmemb == 0)
+	{
+		return (malloc(1));
 	}
 	total = nmemb * size;
 	ptr = malloc(total);

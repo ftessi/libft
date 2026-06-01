@@ -27,6 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_node = ft_lstnew(new_content);
 		if (!new_node)
 		{
+			del(new_content);
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
@@ -35,56 +36,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
-/*
-#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-void	*to_upper_copy(void *content)
-{
-	char	*str;
-	char	*copy;
-	int		i;
-
-	str = (char *)content;
-	copy = ft_strdup(str);
-	if (!copy)
-		return (NULL);
-	i = 0;
-	while (copy[i])
-	{
-		if (copy[i] >= 'a' && copy[i] <= 'z')
-			copy[i] -= 32;
-		i++;
-	}
-	return (copy);
-}
-
-void	del(void *content)
-{
-	free(content);
-}
-
-int	main(void)
-{
-	t_list	*lst;
-	t_list	*new_lst;
-	t_list	*n1;
-	t_list	*n2;
-
-	n1 = ft_lstnew(ft_strdup("hello"));
-	n2 = ft_lstnew(ft_strdup("world"));
-	n1->next = n2;
-	lst = n1;
-	new_lst = ft_lstmap(lst, to_upper_copy, del);
-	printf("Original:\n");
-	printf("%s\n", (char *)lst->content);
-	printf("%s\n", (char *)lst->next->content);
-	printf("\nMapped:\n");
-	printf("%s\n", (char *)new_lst->content);
-	printf("%s\n", (char *)new_lst->next->content);
-	ft_lstclear(&lst, del);
-	ft_lstclear(&new_lst, del);
-	return (0);
-}
-*/

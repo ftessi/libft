@@ -16,22 +16,25 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*substr;
-	unsigned int	i;
+	char	*substr;
+	size_t	slen;
+	size_t	copy_len;
 
-	i = 0;
-	while (s && i < start)
-	{
-		s++;
-		i++;
-	}
-	substr = malloc(len + 1);
-	ft_memcpy(substr, s, len);
-	substr[len + 1] = '\0';
-	if (*substr != *s)
+	if (!s)
 		return (NULL);
+	slen = ft_strlen(s);
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
+		copy_len = slen - start;
 	else
-		return (substr);
+		copy_len = len;
+	substr = malloc(copy_len + 1);
+	if (!substr)
+		return (NULL);
+	ft_memcpy(substr, s + start, copy_len);
+	substr[copy_len] = '\0';
+	return (substr);
 }
 /*
 #include <stdio.h>

@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_isset(char c, char const *set)
+static int	ft_isset(char c, char const *set)
 {
 	while (*set)
 	{
@@ -30,29 +30,20 @@ int	ft_isset(char c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char			*str;
-	char			c;
-	unsigned int	i;
-	unsigned int	j;
-	size_t			strlen;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
-	strlen = ft_strlen(s1);
 	i = 0;
-	j = strlen - 1;
-	c = *s1;
-	while (s1[i] && ft_isset(c, set) == 1)
-	{
-		i++;
-		c = s1[i];
-	}
-	c = s1[j];
-	while (s1[j] && ft_isset(c, set) == 1)
-	{
+	j = ft_strlen(s1);
+	while (j > i && ft_isset(s1[j - 1], set))
 		j--;
-		c = s1[j];
-	}
+	while (i < j && ft_isset(s1[i], set))
+		i++;
 	str = malloc(j - i + 1);
-	ft_strlcpy(str, &s1[i], (j - i + 2));
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, &s1[i], j - i + 1);
 	return (str);
 }
 /*
